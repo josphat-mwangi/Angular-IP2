@@ -5,6 +5,19 @@
   </nav>
 </div>
 <br />
+<br />
+<br />
+<div>
+  <h1>My Profile</h1>
+  <hr />
+  <ul>
+    <li *ngFor="let repo of repos">
+      {{ repo.description }}
+    </li>
+  </ul>
+</div>
+
+<br />
 <br /><br />
 <!--footer-->
 <div class="card text-center">
