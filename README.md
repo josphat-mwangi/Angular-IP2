@@ -21,6 +21,8 @@ angular
 
 ## Live link
 
+https://github.com/josphat-mwangi/Angular-IP2
+
 # license
 
 The project is underMIT license Copyright © 2020.All rights reserved
