@@ -12,6 +12,7 @@ import { HighlightDirective } from './highlight.directive';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { AboutComponent } from './about/about.component';
 import { DateCountPipe } from './date-count.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DateCountPipe } from './date-count.pipe';
     ProfileFormComponent,
     AboutComponent,
     DateCountPipe,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [ProfileService],

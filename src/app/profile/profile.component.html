@@ -5,7 +5,9 @@
     style="background-color: darkblue;"
   >
     <a class="navbar-brand">Github-Search</a>
-    <a class="nav-item nav-link">About</a>
+    <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active"
+      >About</a
+    >
   </nav>
 </div>
 <br />
@@ -112,6 +114,12 @@
           </div>
         </div>
       </div>
+      <p>
+        <u>Pipe</u>: <u>Data requested on</u>:
+        {{ username | date | date: "fullDate" | uppercase }} at Timezone:
+        {{ username | date | date: "mediumTime" }}
+      </p>
+      <br />
     </div>
     <br />
     <br /><br />
