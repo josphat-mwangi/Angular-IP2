@@ -1,28 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
-import { Repo } from '../repo';
+import { ProfileService } from '../github-service/profile.service';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  users: User[] = [
-    { login: 1, followers: 7, following: 8, avatar_url: 'john' },
-  ];
-  repos: Repo[] = [
-    {
-      id: 1,
-      name: 'Tom',
-      description: 'happy',
-      html_url: 'poa',
-      repos_url: '30',
-    },
-  ];
-  getNewUser() {}
-  getNewRepo() {}
-
-  constructor() {}
+  profile: any;
+  repos: any;
+  constructor(private profileService: ProfileService) {
+    this.profileService.getProfileImfo().subscribe((profile) => {
+      console.log(profile);
+      this.profile = profile;
+    });
+    this.profileService.getProfileRepos().subscribe((repos) => {
+      console.log(repos);
+      this.repos = repos;
+    });
+  }
 
   ngOnInit(): void {}
 }

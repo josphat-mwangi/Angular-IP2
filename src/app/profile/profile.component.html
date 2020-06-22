@@ -7,15 +7,87 @@
 <br />
 <br />
 <br />
-<div>
-  <app-profile-form
-    (getUser)="getNewUser()"
-    ,(getRepo)="getNewRepo()"
-  ></app-profile-form>
-</div>
+<div *ngIf="profile">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{ profile.name }} <small>{{ profile.logIn }}</small>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-3">
+          <img
+            src="{{ profile.avatar_url }}"
+            class="img-circle img-responsive"
+            alt="profile image"
+          />
+        </div>
+        <div class="col-sm-5">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="profile.bio">
+              {{ profile.bio }}
+            </li>
+            <li class="list-group-item" *ngIf="profile.hireble">
+              Available for hire
+            </li>
+            <li class="list-group-item" *ngIf="profile.blog">
+              {{ profile.blog }}
+            </li>
+            <li class="list-group-item" *ngIf="profile.email">
+              {{ profile.email }}
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <p>
+              <span class="label label-primary"
+                >{{ profile.followers }} Followers</span
+              >
+              <span class="label label-default">
+                following {{ profile.followering }}</span
+              >
+              <span class="label label-default"
+                >{{ profile.public_gists }} public gists</span
+              >
 
+              <span class="label label-default"
+                >{{ profile.public_repos }} public Repos</span
+              >
+            </p>
+            <p>
+              <a
+                href="{{ profile.html_url }}"
+                target="_blank"
+                class="btn btn-primary"
+                >view profile on github</a
+              >
+            </p>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Repos</h3>
+              </div>
+              <div class="panel-body" *ngFor="let repo of repos">
+                <p>
+                  {{ repo.name }}
+                  <a
+                    href="{{ repo.html_url }}"
+                    class="btn btn-small btn-success"
+                    >view this project on Github</a
+                  >
+                </p>
+                <p>{{ repo.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <br />
 <br /><br />
+
 <!--footer-->
 <div class="card text-center">
   <div class="card-footer bg-transparent border-success">
