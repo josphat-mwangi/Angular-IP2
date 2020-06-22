@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Github"
+    }
+  },
+  "defaultProject": "Github",
+  "cli": {
+    "analytics": false
+  }
 }
