@@ -6,9 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProfileService {
   private username: string;
-
   private clientsecret = '79ca40eb48a12381b2c725e7ff8a0802ba95eacb';
-
   constructor(private http: HttpClient) {
     console.log('it works!');
     this.username = 'josphat-mwangi';
@@ -17,11 +15,10 @@ export class ProfileService {
     return this.http.get('https://api.github.com/users/' + this.username);
   }
   getProfileRepos() {
-    return this.http.get(
-      'https://api.github.com/users/' +
-        this.username +
-        '/repo?client_secret=' +
-        this.clientsecret
-    );
+    return this.http.get('https://api.github.com/users/' + this.username + "/repos?client_secrect=" + this.clientsecret);
+  
+  }
+  updateProfile(username: string) {
+    this.username = username;
   }
 }

@@ -1,0 +1,14 @@
+.form-group {
+  padding-top: 50px;
+}
+.form-control {
+  border-radius: 60px;
+  border: solid yellow;
+  color: brown;
+}
+* {
+  background-image: url(../../assets/dark-colorful-background-photy.org.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: yellowgreen;
+}
