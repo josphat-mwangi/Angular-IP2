@@ -8,13 +8,10 @@
 <br />
 <br />
 <div>
-  <h1>My Profile</h1>
-  <hr />
-  <ul>
-    <div *ngFor="let repo of repos">
-      <li appHighlight>{{ repo.description }}</li>
-    </div>
-  </ul>
+  <app-profile-form
+    (getUser)="getNewUser()"
+    ,(getRepo)="getNewRepo()"
+  ></app-profile-form>
 </div>
 
 <br />

@@ -1,1 +1,18 @@
-<p>profile-form works!</p>
+<form (ngSubmit)="(submitUser)" (ngSubmit)="(submitRepo)" #profileform="ngForm">
+  <div class="form-group">
+    <div class="container">
+      <input type="text" placeholder="Search..." />
+      <div class="search"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-primary">GET USER</button>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-primary">
+        GET REPO <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</form>

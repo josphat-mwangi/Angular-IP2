@@ -19,6 +19,8 @@ export class ProfileComponent implements OnInit {
       repos_url: '30',
     },
   ];
+  getNewUser() {}
+  getNewRepo() {}
 
   constructor() {}
 
