@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HighlightDirective } from './highlight.directive';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProfileFormComponent } from './profile-form/profile-form.component';
     ProfileComponent,
     HighlightDirective,
     ProfileFormComponent,
+    AboutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [ProfileService],
